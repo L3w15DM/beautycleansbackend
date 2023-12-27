@@ -19,6 +19,7 @@ namespace FullStackAuth_WebAPI.Models
 
         [ForeignKey("Package")]
         public string Package { get; set; }
+       
         
     }
 }

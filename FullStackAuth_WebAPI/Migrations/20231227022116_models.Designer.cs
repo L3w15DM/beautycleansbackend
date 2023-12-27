@@ -3,6 +3,7 @@ using System;
 using FullStackAuth_WebAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FullStackAuth_WebAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231227022116_models")]
+    partial class models
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -209,13 +212,13 @@ namespace FullStackAuth_WebAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0eef8e7f-22b9-4736-9814-8aa25de8215c",
+                            Id = "387abfcc-12d2-411b-b799-e8cc95ad731d",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "e0dbb9b1-5874-4b10-a670-8ee8cfb38222",
+                            Id = "aecff5c4-2930-4a2e-89c6-4fb1ca821731",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
